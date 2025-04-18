@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arreglo[10];
+
+    // Para ingresar los 10 números
+    for (int i = 0; i < 10; i++) {
+        cout << "Ingresa el número " << i + 1 << ": ";
+        cin >> arreglo[i];
+    }
+
+    // Guardamos el ultimo para no perderlo
+    int ultimo = arreglo[9];
+
+    // Mover los elementos hacia la derecha
+    for (int i = 9; i > 0; i--) {
+        arreglo[i] = arreglo[i - 1];
+    }
+
+    arreglo[0] = ultimo;
+
+    // Mostrar el arreglo ritado
+    cout << "Arreglo rotado a la derecha: ";
+    for (int i = 0; i < 10; i++) {
+        cout << arreglo[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
