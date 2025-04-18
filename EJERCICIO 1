@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int tamaño = 30;
+    int suma = 0;
+    int arrai[tamaño];
+
+    // Leer las 30 calificaciones
+    for (int i = 0; i < tamaño; i++) {
+        cout << "Ingresa la calificación del estudiante " << i + 1 << ": ";
+        cin >> arrai[i];
+        suma = suma + arrai[i];
+    }
+
+    // Calcular promedio
+    int promedio = suma / tamaño;
+    cout << "\nEl promedio general es: " << promedio << endl;
+
+    // Contar cuántos están por encima del promedio general
+    int contador = 0;
+    for (int i = 0; i < tamaño; i++) {
+        if (arrai[i] > promedio) {
+            contador++;
+        }
+    }
+
+    cout << "Cantidad de estudiantes por encima del promedio: " << contador << endl;
+
+    return 0;
+}
